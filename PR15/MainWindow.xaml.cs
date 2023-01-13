@@ -23,6 +23,37 @@ namespace PR15
         public MainWindow()
         {
             InitializeComponent();
+            cmbArifm.SelectedIndex = 0;
+            Model.tb = tbSimb;
+            Model.result = tbRes;
+        }
+
+        private void cmbArifm_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Model.Position = cmbArifm.SelectedIndex;
+        }
+
+        private void btnCalc_Click(object sender, RoutedEventArgs e)
+        {
+            int a = Convert.ToInt32(tbOne.Text);
+            int b = Convert.ToInt32(tbTwo.Text);
+            int c =0;
+            switch(cmbArifm.SelectedIndex)
+            {
+                case 0:
+                    c = a + b;
+                    break;
+                case 1:
+                    c = a - b;
+                    break;
+                case 2:
+                    c = a * b;
+                    break;
+                case 3:
+                    c = a / b;
+                    break;
+            }
+            Model.Calculation = c;
         }
     }
 }

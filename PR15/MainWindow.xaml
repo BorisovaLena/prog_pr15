@@ -9,13 +9,18 @@
     <Grid>
         <StackPanel Width="215">
             <TextBlock Text="Выберите арифметическую операцию"/>
-            <ComboBox Name="cmbArifm"/>
+            <ComboBox Name="cmbArifm" SelectionChanged="cmbArifm_SelectionChanged">
+                <ComboBoxItem Content="Сложение"/>
+                <ComboBoxItem Content="Вычитание"/>
+                <ComboBoxItem Content="Умножение"/>
+                <ComboBoxItem Content="Деление"/>
+            </ComboBox>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBox Name="tbOne" Width="50" Margin="10"/>
                 <TextBlock Name="tbSimb" Margin="10"/>
                 <TextBox Name="tbTwo" Width="50" Margin="10"/>
             </StackPanel>
-            <Button Name="btnCalc" Content="Вычислить"/>
+            <Button Name="btnCalc" Content="Вычислить" Click="btnCalc_Click"/>
             <GroupBox Header="Результат:">
                 <TextBox Name="tbRes"/>
             </GroupBox>
