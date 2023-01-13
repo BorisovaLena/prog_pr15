@@ -24,12 +24,12 @@ namespace PR15
         {
             InitializeComponent();
             cmbArifm.SelectedIndex = 0;
-            Model.tb = tbSimb;
-            Model.result = tbRes;
         }
 
         private void cmbArifm_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            Model.tb = tbSimb;
+            Model.result = tbRes;
             Model.Position = cmbArifm.SelectedIndex;
         }
 

@@ -18,14 +18,14 @@ namespace PR15
         public static TextBox result;
 
         // блок с бизнес-логикой
-        public static int Position
+        public static int Position // отображение знака
         {
             set
             {
                 tb.Text = signsList[value].ToString();
             }
         }
-        public static int Calculation
+        public static int Calculation // отображение результата
         {
             set
             {
