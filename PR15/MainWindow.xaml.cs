@@ -48,22 +48,29 @@ namespace PR15
                     int a = Convert.ToInt32(tbOne.Text);
                     int b = Convert.ToInt32(tbTwo.Text);
                     int c = 0;
-                    switch (cmbArifm.SelectedIndex)
+                    if(b==0 && cmbArifm.SelectedIndex == 3)
                     {
-                        case 0:
-                            c = a + b;
-                            break;
-                        case 1:
-                            c = a - b;
-                            break;
-                        case 2:
-                            c = a * b;
-                            break;
-                        case 3:
-                            c = a / b;
-                            break;
+                        MessageBox.Show("Делить на 0 нельзя!!!");
                     }
-                    Model.Calculation = c;
+                    else
+                    {
+                        switch (cmbArifm.SelectedIndex)
+                        {
+                            case 0:
+                                c = a + b;
+                                break;
+                            case 1:
+                                c = a - b;
+                                break;
+                            case 2:
+                                c = a * b;
+                                break;
+                            case 3:
+                                c = a / b;
+                                break;
+                        }
+                        Model.Calculation = c;
+                    } 
                 }
                 else
                 {
